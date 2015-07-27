@@ -6,13 +6,13 @@ import Test.Hspec
 import Test.Hspec.Wai
 import Api.Routes
 import Network.Wai (Application)
-import qualified Web.Scotty as S
+import Web.Scotty (scottyApp)
 
 main :: IO ()
 main = hspec spec
 
 app :: IO Application
-app = S.scottyApp $ routes
+app = scottyApp $ routes
 
 spec :: Spec
 spec = with app $ do
