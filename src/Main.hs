@@ -1,4 +1,7 @@
-import System.Environment
+{-# LANGUAGE OverloadedStrings #-}
+
+import Web.Scotty (scotty)
+import Api.Routes (app')
 
 main :: IO ()
-main = print "test"
+main = scotty 3000 app'

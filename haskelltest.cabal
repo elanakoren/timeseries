@@ -5,8 +5,6 @@ name:                haskelltest
 version:             0.1.0.0
 synopsis:            testing
 homepage:            whatever.com
-license:             MIT
-license-file:        LICENSE
 author:              Elana+Eric
 maintainer:          test@gmail.com
 category:            Web
@@ -14,7 +12,6 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 executable haskelltest
-  -- .hs or .lhs file containing the Main module.
   main-is: Main.hs
 
   -- Modules included in this executable, other than Main.
