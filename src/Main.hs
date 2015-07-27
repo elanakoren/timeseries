@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import Web.Scotty (scotty)
-import Api.Routes (app')
+import Api.Routes (routes)
 
 main :: IO ()
-main = scotty 3000 app'
+main = scotty 3000 routes
