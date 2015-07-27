@@ -1,9 +1,6 @@
 {-# LANGUAGE OverloadedStrings, QuasiQuotes #-}
 
-module Api.Routes
-(
-    app
-) where
+module Api.Routes (app) where
 
 import           Network.Wai (Application)
 import qualified Web.Scotty as S
