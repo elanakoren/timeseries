@@ -2,9 +2,9 @@
 
 module Api.Routes (routes) where
 
-import qualified Web.Scotty as S
+import Web.Scotty
 
-routes :: S.ScottyM ()
+routes :: ScottyM ()
 routes = do
-         S.get "/" $ do
-           S.text "hello"
+         get "/" $ do
+           text "hello"
