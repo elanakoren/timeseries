@@ -19,3 +19,6 @@ spec = with app $ do
   describe "GET /" $ do
     it "responds with 200" $ do
       get "/" `shouldRespondWith` 200
+  describe "POST /datapoints/ingest" $ do
+    it "responds with 204" $ do
+      post "/datapoints/ingest" "[{\"tagname\":\"test\"},\"datapoints\":[[1438103645000, 10]]]" `shouldRespondWith` 204

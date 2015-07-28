@@ -23,6 +23,7 @@ executable haskelltest
   build-depends:   base >=4.7 && <4.8
                  , scotty
                  , wai
+                 , http-types
 
   hs-source-dirs: src
 
@@ -41,3 +42,4 @@ test-suite spec
                , hspec-wai
                , scotty
                , wai
+               , http-types
