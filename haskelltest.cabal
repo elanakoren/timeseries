@@ -3,43 +3,36 @@
 
 name:                haskelltest
 version:             0.1.0.0
-synopsis:            testing
-homepage:            whatever.com
-author:              Elana+Eric
-maintainer:          test@gmail.com
+author:              Eric+Elana+Ben
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
 
 executable haskelltest
-  main-is: Main.hs
-
-  -- Modules included in this executable, other than Main.
+  main-is:             Main.hs
   -- other-modules:
+  other-extensions:    OverloadedStrings, QuasiQuotes
+  build-depends:       base >=4.8 && <4.9
+                      , scotty >=0.10 && <0.11
+                      , http-types >=0.8 && <0.9
+                      , hspec >=2.1 && <2.2
+                      , hspec-wai >=0.6 && <0.7
+                      , wai >=3.0 && <3.1
+  hs-source-dirs:      src
+  default-language:    Haskell2010
 
-  -- LANGUAGE extensions used by modules in this package.
-  -- other-extensions:
+test-suite spec
+    type: exitcode-stdio-1.0
 
-  build-depends:   base >=4.7 && <4.8
+    hs-source-dirs: test,src
+
+    main-is: Spec.hs
+
+    build-depends: base == 4.8.*
+                 , hspec >= 1.3
+                 , hspec-wai
                  , scotty
                  , wai
                  , http-types
 
-  hs-source-dirs: src
-
-  default-language:    Haskell2010
-
-
-test-suite spec
-  type: exitcode-stdio-1.0
-
-  hs-source-dirs: test,src
-
-  main-is: Spec.hs
-
-  build-depends: base >=4.7 && <4.8
-               , hspec >= 1.3
-               , hspec-wai
-               , scotty
-               , wai
-               , http-types
+    default-language:    Haskell2010
