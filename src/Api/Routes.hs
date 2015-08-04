@@ -9,5 +9,5 @@ routes :: ScottyM ()
 routes = do
          get "/" $ do
            text "hello"
-         post "/datapoints/ingest" $ do
+         post "/datapoints" $ do
            status status204
